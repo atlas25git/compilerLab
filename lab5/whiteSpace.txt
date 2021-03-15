@@ -1,0 +1,15 @@
+%{
+#include<stdio.h>
+%}
+%%
+[\n\t ' '] {};
+%%
+main()
+{
+yyin=fopen("myfile.txt","r");
+yylex();
+}
+int yywrap()
+{
+return 1;
+}
